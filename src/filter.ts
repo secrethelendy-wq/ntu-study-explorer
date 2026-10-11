@@ -20,7 +20,10 @@ export function filterSpaces(data: Space[], filters: Filters): Space[] {
     const haystack = normalize([s.name, s.building, s.floor, floorTerms(s.floor), s.title, s.description, s.location.entranceNote, ...Object.values(s.raw)].join(' '))
     return tokens.every(token => haystack.includes(token))
       && (!filters.quietness || s.quietness.level === filters.quietness)
-      && (!filters.outlets || s.outlets.coverage === filters.outlets)
+     && (!filters.outlets
+  || (filters.outlets === 'available'
+    ? s.outlets.coverage === 'all' || s.outlets.coverage === 'partial'
+    : s.outlets.coverage === filters.outlets))
       && (!filters.openness || s.openness === filters.openness)
       && boolMatches(filters.studentCard, s.studentCardRequired)
       && boolMatches(filters.airConditioning, s.climate.airConditioning)
