@@ -1,0 +1,433 @@
+{
+  "checkedAt": "2026-10-11T15:10:17.870Z",
+  "projectRoot": "C:\\Users\\helen\\Documents\\Codex\\2026-10-11\\ui-ux-pdf-metadata-3-pdf\\outputs\\ntu-study-explorer",
+  "url": "http://127.0.0.1:4175/ntu-study-explorer/",
+  "server": "Vite preview, retained foreground tool session",
+  "serverPid": 13588,
+  "browser": "Installed Google Chrome, visible window, real HTTP; no routing or header overrides",
+  "homeStatus": 200,
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "spaces": 15,
+  "markers": 13,
+  "photos": 18,
+  "zoom": "16 → 17 → 16",
+  "markerPopupSpaces": 2,
+  "searchResults": 2,
+  "airConditioningFilterResults": 9,
+  "metadataSha256": "374c3a1bf41f01209610423d662836b6bbc87b44a725d26e7dc6baf8a8523dc5",
+  "javascriptErrors": [],
+  "failedRequests": [],
+  "tilesCancelledWhenViewportChanged": [
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56121.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56121.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56120.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56120.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56121.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56121.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56120.png",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56120.png",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "tiles": [
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28061.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=21273, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28061.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12830, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28062.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19473, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28062.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=20216, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=13751, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19156, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28061.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=11504, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28061.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19009, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28062.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=14534, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28062.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=15686, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28063.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=17532, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28063.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19022, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=21398, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12082, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28063.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=13142, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28063.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19658, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56123.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12509, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56123.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12369, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56122.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=21442, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56122.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=20114, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56124.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=20731, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56124.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=17377, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56123.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=1127, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56123.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12586, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56122.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=13562, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56122.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=10815, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56124.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12229, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56124.png",
+      "referer": "http://127.0.0.1:4175/",
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=13787, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56121.png",
+      "referer": "http://127.0.0.1:4175/"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56121.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=11562, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56120.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56120.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=15515, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56121.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56121.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=11184, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56120.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=20155, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56120.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=20891, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=13751, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19156, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28061.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12830, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28059.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=13973, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28059.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=19699, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28059.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=20389, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28059.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12870, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28060.png",
+      "referer": "http://127.0.0.1:4175/",
+      "cacheControlRequest": null,
+      "status": 200,
+      "blocked": null,
+      "cacheControlResponse": "max-age=12082, stale-while-revalidate=604800, stale-if-error=604800",
+      "fromDiskCache": false
+    }
+  ],
+  "blockedTileResponses": 0,
+  "serverKeptRunning": true,
+  "browserKeptOpen": true
+}

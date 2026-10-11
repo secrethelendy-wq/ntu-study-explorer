@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-10-11T15:17:04.281170+00:00",
+  "scope": "GitHub Pages deployment preparation; not yet uploaded or published",
+  "repositoryName": "ntu-study-explorer",
+  "base": "/ntu-study-explorer/",
+  "cleanNpmCi": "passed (124 packages installed in isolated work/pages-ci)",
+  "productionBuild": "passed in original project and clean installation",
+  "cleanBuildMatchesOriginal": true,
+  "unitTests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "browserChecks": {
+    "uniqueCasesPassed": 21,
+    "devices": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "firstRunPassed": 20,
+    "firstRunTimeouts": 1,
+    "targetedMobileRerunPassed": 1,
+    "targetedMobileDurationSeconds": 23.2,
+    "functionalTiles": "local mock; no public OSM scans"
+  },
+  "liveMap": {
+    "url": "http://127.0.0.1:4175/ntu-study-explorer/",
+    "mode": "Installed Google Chrome, visible window, real HTTP; no routing or header overrides",
+    "httpStatus": 200,
+    "spaces": 15,
+    "buildingMarkers": 13,
+    "originalPhotos": 18,
+    "blockedTileResponses": 0,
+    "javascriptErrors": [],
+    "zoomAndPopup": "passed",
+    "searchAndFilter": "passed",
+    "osmRequestsIncludeRealOrigin": true
+  },
+  "workflowValidation": {
+    "validYaml": true,
+    "trigger": "main push or workflow_dispatch",
+    "node": "24",
+    "artifact": "dist",
+    "needs": "build",
+    "permissions": "pages:write, id-token:write",
+    "githubActionsExecuted": false
+  },
+  "localPreviewServerValidation": {
+    "passed": true,
+    "rootRedirect": 302,
+    "base": "/ntu-study-explorer/",
+    "homepage": 200,
+    "assets": 3,
+    "photo": 200,
+    "cacheConditionalGet": 304,
+    "referrerPolicy": "strict-origin-when-cross-origin"
+  },
+  "metadataUnchanged": true,
+  "metadataSha256": "374c3a1bf41f01209610423d662836b6bbc87b44a725d26e7dc6baf8a8523dc5",
+  "originalPhotosUnchanged": true,
+  "photos": [
+    {
+      "name": "s01-01.jpg",
+      "sha256": "51eaa540f106d810e58e107287988b7d17624ef262b7c0807db40ab2ccd53254"
+    },
+    {
+      "name": "s02-01.jpg",
+      "sha256": "9fb611a105ed3978a38c5c3c38a5e4fb013f81ad374a35f3454e82e6b60d6c4b"
+    },
+    {
+      "name": "s03-01.jpg",
+      "sha256": "d11e35723e5f59c8d883ae6be1ad0196d7fb2bbabf3ec573fb6f012da20c3e39"
+    },
+    {
+      "name": "s04-01.jpg",
+      "sha256": "32e252a318b75fac87c3e0d4c85288bc0494f4b9f864cd9a1f03aa785bc19e46"
+    },
+    {
+      "name": "s05-01.jpg",
+      "sha256": "f90d842434a666716cc02bf962678f3719e5290099ca000f6a3240600c77c2a5"
+    },
+    {
+      "name": "s06-01.jpg",
+      "sha256": "a990d3c008f1ade9a01d97ad69a08942f94a8f305bfdced7ecb37e4b0ca16e24"
+    },
+    {
+      "name": "s07-01.jpg",
+      "sha256": "454a8a448af31aceccb6f880156588fb65460e29ccf957456c622f960bb9c0f0"
+    },
+    {
+      "name": "s07-02.jpg",
+      "sha256": "5d32d166a5898cb88ad600bdf7460c4907c3e335b4f134fda6b2155ae82e5836"
+    },
+    {
+      "name": "s07-03.jpg",
+      "sha256": "6a4181fb317645a71d3af0bb5786bccf521c6b15e135e4f9e8e96b1f8b977bbe"
+    },
+    {
+      "name": "s07-04.jpg",
+      "sha256": "39bfb675fd012c2bdac4c6763936f80ea4732e69168fad28eac4954d074709a0"
+    },
+    {
+      "name": "s08-01.jpg",
+      "sha256": "81798ddd3b9e21515eac3967c2685808bb862e2e22b69122c276af3406cd92e5"
+    },
+    {
+      "name": "s09-01.jpg",
+      "sha256": "d3a933238cd5550dafaa34d90b64a40ca57ef5dc7fabbd30f7509dfe8aeb774b"
+    },
+    {
+      "name": "s10-01.jpg",
+      "sha256": "a82d3cc29809540a2b3bfbf31ed1c2d87250acd3d8e6d52fe68f06fbbfc62454"
+    },
+    {
+      "name": "s11-01.jpg",
+      "sha256": "9b6f5480a040604c1dad7e1e2875b611b69558452c7545dd31c41c6bb18f9327"
+    },
+    {
+      "name": "s12-01.jpg",
+      "sha256": "b27c194f89b08bdb95263f25167fc3a174f91d30409b6ff4da8b44864947761c"
+    },
+    {
+      "name": "s13-01.jpg",
+      "sha256": "18f35556ebbc53f57b25eda852916f7ebb5e23269de88c8d2defb94aeb3206b8"
+    },
+    {
+      "name": "s14-01.jpg",
+      "sha256": "21ec1c981411012ff01be81cd0c077d94af75695c35602d7e43768d02165408f"
+    },
+    {
+      "name": "s15-01.jpg",
+      "sha256": "e7a609fc8b2cc4b8feea50d6734706405e6b7d7ef673e0ccf598840fa1f6ece1"
+    }
+  ],
+  "githubActionsExecuted": false,
+  "publicSitePublished": false
+}

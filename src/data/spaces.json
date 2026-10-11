@@ -1,0 +1,2586 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "臺大自習空間探索",
+  "source": {
+    "filename": "資組一 metadata 作業 (3).pdf",
+    "pageCount": 19,
+    "recordCount": 15,
+    "photoCount": 18,
+    "surveyDate": null,
+    "conversionDate": "2026-10-11",
+    "coordinateSource": "https://map.ntu.edu.tw/geoserver/ntuga/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ntuga%3Antu_building_bound&outputFormat=application%2Fjson&srsName=EPSG:4326",
+    "coordinateAccessDate": "2026-10-11"
+  },
+  "qualityIssues": [
+    {
+      "id": "lighting-conflict",
+      "spaceIds": [
+        "s02"
+      ],
+      "category": "資料矛盾",
+      "description": "普通教學館的室內燈具敘述互相矛盾。",
+      "original": "室內無燈具；另列「室內燈具：有」。",
+      "resolution": "燈具與室內照明充足度標記為未知，不納入有／無或充足度篩選；自然光影響仍可篩選。",
+      "status": "待確認"
+    },
+    {
+      "id": "wrong-map-key",
+      "spaceIds": [
+        "s04"
+      ],
+      "category": "網址錯誤",
+      "description": "綜合教學館 4~6F 的網址完全沿用總圖書館網址。",
+      "original": "https://map.ntu.edu.tw/index.html?height=3321&cx=13529519.0\n3312773&cy=2877954.066743617&layer=bnR1X2J1aWxkaW5\nnX2JvdW5k&apKey=Mw==",
+      "resolution": "原始網址保留；網站標記使用已核對的官方綜合教學館建築圖資（ap_key 1864）。",
+      "status": "待確認"
+    },
+    {
+      "id": "outlet-location",
+      "spaceIds": [
+        "s02"
+      ],
+      "category": "資訊缺漏",
+      "description": "只記錄可使用插座的席位 6 席，未指明所屬區域。",
+      "original": "插座：6席",
+      "resolution": "分類為部分座位可使用；不推定插座位於連接通道。",
+      "status": "待確認"
+    },
+    {
+      "id": "building-typo",
+      "spaceIds": [
+        "s02"
+      ],
+      "category": "格式不一致",
+      "description": "席位區域的「博雅教學管」與建築名稱的「博雅教學館」寫法不一致。",
+      "original": "普通教學館及博雅教學管的連接通道：6席",
+      "resolution": "保留原字於原始紀錄及席位分區，不自動更正。",
+      "status": "待確認"
+    },
+    {
+      "id": "rental-link",
+      "spaceIds": [
+        "s08"
+      ],
+      "category": "格式不一致",
+      "description": "外借查詢的顯示文字使用「–」，PDF 實際超連結使用「-」；查詢日期固定為 2026-10-02。",
+      "original": "文字：Date=2026–10–02；PDF 超連結：Date=2026-10-02",
+      "resolution": "兩種原始內容都保留；可點擊連結使用 PDF 既有超連結目標，不自行更新日期或推測目前場地狀況。",
+      "status": "待確認"
+    },
+    {
+      "id": "rental-wording",
+      "spaceIds": [
+        "s08"
+      ],
+      "category": "特殊規定",
+      "description": "「週一不開放外借」描述的是外借規則；無法據此判斷週一自習可否使用。",
+      "original": "如遇到場地外借不開放，可以上官網查詢，當天入口也有告示牌公告，週一不開放外借",
+      "resolution": "完整顯示原規則；不推測營業時間或當日使用狀態。",
+      "status": "待確認"
+    },
+    {
+      "id": "chemistry-photo",
+      "spaceIds": [
+        "s09"
+      ],
+      "category": "照片涵蓋範圍",
+      "description": "化學系圖書館照片可見電腦座位；文字另列影印用電腦 6 席，照片區域沒有獨立標籤。",
+      "original": "館內有影印機1台與影印用電腦座位6席。",
+      "resolution": "保留紀錄對應照片；不將另列電腦席位加進自習席位總數。",
+      "status": "待確認"
+    },
+    {
+      "id": "unknown-counts",
+      "spaceIds": [
+        "s04",
+        "s07",
+        "s14",
+        "s15"
+      ],
+      "category": "資訊缺漏",
+      "description": "部分可使用插座的紀錄未提供席位數。",
+      "original": "部分位置可以使用插座；部分靠牆位置才能使用到插座",
+      "resolution": "已知可用席位數設為 null；不得視為 0。",
+      "status": "待確認"
+    },
+    {
+      "id": "independent-lighting",
+      "spaceIds": [],
+      "category": "資訊缺漏",
+      "description": "多數紀錄未說明是否有獨立照明設備。",
+      "original": "僅化學系、法律學院、圖資系實習及辜振甫圖書館明確記載。",
+      "resolution": "未記載者使用 null，保留未知，不視為無。",
+      "status": "待確認"
+    },
+    {
+      "id": "survey-date",
+      "spaceIds": [],
+      "category": "資訊缺漏",
+      "description": "PDF 沒有整體調查日期、每日開放時間或即時座位資訊。",
+      "original": "外借查詢網址的日期不是整體調查日期。",
+      "resolution": "網站只顯示紀錄總席位，不提供即時空位或目前開放狀態。",
+      "status": "待確認"
+    },
+    {
+      "id": "camera-centers",
+      "spaceIds": [],
+      "category": "座標語意",
+      "description": "cx/cy 為 Web Mercator 視圖中心，不等於建築位置；數筆網址共用中心。",
+      "original": "官方 index.bundle.js 使用 EPSG:3857 → EPSG:4326；apKey 指向建築屬性。",
+      "resolution": "以官方 WFS EPSG:4326 建築輪廓計算中心點，核對名稱、uid 與 ap_key。原視圖座標另存，不直接當圖釘。",
+      "status": "待確認"
+    }
+  ],
+  "spaces": [
+    {
+      "id": "s01",
+      "name": "總圖書館–1F–多元共享區與輕閱讀區",
+      "title": "多元共享區與輕閱讀區",
+      "building": "總圖書館",
+      "floor": "1F",
+      "source": {
+        "pages": [
+          1,
+          2
+        ],
+        "fieldPages": {
+          "名稱": [
+            1
+          ],
+          "席位": [
+            1
+          ],
+          "插座": [
+            1
+          ],
+          "安靜程度": [
+            1
+          ],
+          "空間開放程度": [
+            1
+          ],
+          "是否需要學生證": [
+            1
+          ],
+          "空調": [
+            1
+          ],
+          "飲食": [
+            1
+          ],
+          "光線相關": [
+            1
+          ],
+          "地點": [
+            1
+          ],
+          "說明": [
+            1
+          ],
+          "記錄者": [
+            1
+          ],
+          "照片": [
+            2
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "總圖書館–1F–多元共享區與輕閱讀區",
+        "席位": "多元共享區：約60–70席\n輕閱讀區：36席",
+        "插座": "全部位置皆可以方便地使用到插座",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：他人使用電腦的聲音、翻頁聲\n● 能否出聲討論：開放正常討論\n● 附註：但現場很安靜，會不敢出聲",
+        "空間開放程度": "室內開放空間︰建築物內無另外的獨立出入口，或無法完全封閉",
+        "是否需要學生證": "需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "室內有燈具，光線充足；不受自然光影響",
+        "地點": "https://map.ntu.edu.tw/index.html?height=3321&cx=13529519.0\n3312773&cy=2877954.066743617&layer=bnR1X2J1aWxkaW5\nnX2JvdW5k&apKey=Mw==",
+        "說明": "進入館內需刷學生證入閘門，位於左手邊",
+        "記錄者": "陳子罃",
+        "照片": "PDF 第 2 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "多元共享區",
+            "minimum": 60,
+            "maximum": 70,
+            "estimated": true
+          },
+          {
+            "label": "輕閱讀區",
+            "minimum": 36,
+            "maximum": 36,
+            "estimated": false
+          }
+        ],
+        "minimum": 96,
+        "maximum": 106,
+        "estimated": true,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "all",
+        "knownSeats": null,
+        "estimated": false,
+        "knownSeatRange": {
+          "minimum": 96,
+          "maximum": 106,
+          "estimated": true,
+          "basis": "由全部座位可用與紀錄席位推得，非插座數量。"
+        },
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "他人使用電腦的聲音",
+          "翻頁聲"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放正常討論",
+        "note": "但現場很安靜，會不敢出聲"
+      },
+      "openness": "室內開放空間",
+      "studentCardRequired": true,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": false,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=3321&cx=13529519.03312773&cy=2877954.066743617&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=Mw==",
+        "originalMapKey": 3,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529519.03312773,
+          "y": 2877954.066743617,
+          "wgs84": [
+            121.53773734,
+            25.01798686
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01749829,
+          "longitude": 121.54105518,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.24",
+          "buildingUid": "AT3041",
+          "officialName": "圖書館",
+          "verifiedMapKey": 3
+        },
+        "entranceNote": "進入館內需刷學生證入閘門，位於左手邊"
+      },
+      "description": "進入館內需刷學生證入閘門，位於左手邊",
+      "externalLinks": [],
+      "recorder": "陳子罃",
+      "photos": [
+        {
+          "src": "images/s01-01.jpg",
+          "alt": "總圖書館 1F 多元共享區與輕閱讀區，PDF 原始照片 1",
+          "sourcePage": 2,
+          "sourceImage": 1,
+          "sha256": "51eaa540f106d810e58e107287988b7d17624ef262b7c0807db40ab2ccd53254"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s02",
+      "name": "普通教學館–2F–開放空間",
+      "title": "開放空間",
+      "building": "普通教學館",
+      "floor": "2F",
+      "source": {
+        "pages": [
+          2,
+          3
+        ],
+        "fieldPages": {
+          "名稱": [
+            2
+          ],
+          "席位": [
+            2
+          ],
+          "插座": [
+            2
+          ],
+          "安靜程度": [
+            2
+          ],
+          "空間開放程度": [
+            2
+          ],
+          "是否需要學生證": [
+            2
+          ],
+          "空調": [
+            2
+          ],
+          "飲食": [
+            2
+          ],
+          "光線相關": [
+            2
+          ],
+          "地點": [
+            2,
+            3
+          ],
+          "說明": [
+            3
+          ],
+          "記錄者": [
+            3
+          ],
+          "照片": [
+            3
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "普通教學館–2F–開放空間",
+        "席位": "走廊木桌椅：約32席\n普通教學館及博雅教學管的連接通道：6席",
+        "插座": "6席",
+        "安靜程度": "安靜程度低；\n可能聲音來源包含他人對話、上課聲音、下課喧鬧；\n能正常出聲討論",
+        "空間開放程度": "半室內︰位於建築物內具有屋頂，但無法完全封閉，會受天氣影響",
+        "是否需要學生證": "不需要學生證",
+        "空調": "無空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "室內無燈具；受自然光影響，白天天氣晴朗時光線才足夠充足\n● 室內燈具：有\n● 是否受自然光線影響：是，白天天氣晴朗時光線才足夠充足",
+        "地點": "https://map.ntu.edu.tw/index.html?height=419&cx=13529408.02\n4473308&cy=2878022.9767298712&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTQ4",
+        "說明": "",
+        "記錄者": "陳子罃",
+        "照片": "PDF 第 3 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "走廊木桌椅",
+            "minimum": 32,
+            "maximum": 32,
+            "estimated": true
+          },
+          {
+            "label": "普通教學館及博雅教學管的連接通道",
+            "minimum": 6,
+            "maximum": 6,
+            "estimated": false
+          }
+        ],
+        "minimum": 38,
+        "maximum": 38,
+        "estimated": true,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": 6,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "低",
+        "noiseSources": [
+          "他人對話",
+          "上課聲音",
+          "下課喧鬧"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "能正常出聲討論",
+        "note": null
+      },
+      "openness": "半室內",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": false,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": null,
+        "indoorAdequacy": "unknown",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=419&cx=13529408.024473308&cy=2878022.9767298712&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTQ4",
+        "originalMapKey": 148,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529408.024473308,
+          "y": 2878022.9767298712,
+          "wgs84": [
+            121.53674013,
+            25.01854781
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01854613,
+          "longitude": 121.53674118,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.246",
+          "buildingUid": "AT1009",
+          "officialName": "普通教學館",
+          "verifiedMapKey": 148
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "陳子罃",
+      "photos": [
+        {
+          "src": "images/s02-01.jpg",
+          "alt": "普通教學館 2F 開放空間，PDF 原始照片 1",
+          "sourcePage": 3,
+          "sourceImage": 1,
+          "sha256": "9fb611a105ed3978a38c5c3c38a5e4fb013f81ad374a35f3454e82e6b60d6c4b"
+        }
+      ],
+      "issueIds": [
+        "lighting-conflict",
+        "outlet-location",
+        "building-typo"
+      ]
+    },
+    {
+      "id": "s03",
+      "name": "綜合教學館–1F–學習開放空間",
+      "title": "學習開放空間",
+      "building": "綜合教學館",
+      "floor": "1F",
+      "source": {
+        "pages": [
+          3,
+          4
+        ],
+        "fieldPages": {
+          "名稱": [
+            3
+          ],
+          "席位": [
+            3
+          ],
+          "插座": [
+            3
+          ],
+          "安靜程度": [
+            3
+          ],
+          "空間開放程度": [
+            4
+          ],
+          "是否需要學生證": [
+            4
+          ],
+          "空調": [
+            4
+          ],
+          "飲食": [
+            4
+          ],
+          "光線相關": [
+            4
+          ],
+          "地點": [
+            4
+          ],
+          "說明": [
+            4
+          ],
+          "記錄者": [
+            4
+          ],
+          "照片": [
+            4
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "綜合教學館–1F–學習開放空間",
+        "席位": "約70席",
+        "插座": "全部位置皆可以方便地使用到插座",
+        "安靜程度": "安靜程度高；\n可能聲音來源包含他人使用飲水機的聲音；\n未禁止討論，但現場很安靜",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "禁止飲食",
+        "光線相關": "室內有燈具，光線充足；不受自然光影響",
+        "地點": "https://map.ntu.edu.tw/index.html?height=640&cx=13529721.97\n3226964&cy=2877985.6898857676&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTg2NA==",
+        "說明": "",
+        "記錄者": "陳子罃",
+        "照片": "PDF 第 4 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "1F",
+            "minimum": 70,
+            "maximum": 70,
+            "estimated": true
+          }
+        ],
+        "minimum": 70,
+        "maximum": 70,
+        "estimated": true,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "all",
+        "knownSeats": null,
+        "estimated": false,
+        "knownSeatRange": {
+          "minimum": 70,
+          "maximum": 70,
+          "estimated": true,
+          "basis": "由全部座位可用與紀錄席位推得，非插座數量。"
+        },
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "他人使用飲水機的聲音"
+        ],
+        "discussion": "not-prohibited",
+        "discussionOriginal": "未禁止討論，但現場很安靜",
+        "note": "未禁止討論，但現場很安靜"
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": true,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": false,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": false,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=640&cx=13529721.973226964&cy=2877985.6898857676&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTg2NA==",
+        "originalMapKey": 1864,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529721.973226964,
+          "y": 2877985.6898857676,
+          "wgs84": [
+            121.53956038,
+            25.01824428
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01820724,
+          "longitude": 121.53950271,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.249",
+          "buildingUid": "AT2049",
+          "officialName": "綜合教學館",
+          "verifiedMapKey": 1864
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "陳子罃",
+      "photos": [
+        {
+          "src": "images/s03-01.jpg",
+          "alt": "綜合教學館 1F 學習開放空間，PDF 原始照片 1",
+          "sourcePage": 4,
+          "sourceImage": 1,
+          "sha256": "d11e35723e5f59c8d883ae6be1ad0196d7fb2bbabf3ec573fb6f012da20c3e39"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s04",
+      "name": "綜合教學館–4~6F–開放空間",
+      "title": "開放空間",
+      "building": "綜合教學館",
+      "floor": "4~6F",
+      "source": {
+        "pages": [
+          4,
+          5
+        ],
+        "fieldPages": {
+          "名稱": [
+            4
+          ],
+          "席位": [
+            4
+          ],
+          "插座": [
+            5
+          ],
+          "安靜程度": [
+            5
+          ],
+          "空間開放程度": [
+            5
+          ],
+          "是否需要學生證": [
+            5
+          ],
+          "空調": [
+            5
+          ],
+          "飲食": [
+            5
+          ],
+          "光線相關": [
+            5
+          ],
+          "地點": [
+            5
+          ],
+          "說明": [
+            5
+          ],
+          "記錄者": [
+            5
+          ],
+          "照片": [
+            5
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "綜合教學館–4~6F–開放空間",
+        "席位": "4F：12席\n5F：12席\n6F：12席",
+        "插座": "部分靠牆位置才能使用到插座",
+        "安靜程度": "安靜程度低；\n可能聲音來源包含他人對話、上課聲音、下課喧鬧；\n能正常出聲討論",
+        "空間開放程度": "室內開放空間︰建築物內無另外的獨立出入口，或無法完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "無空調，有風扇",
+        "飲食": "可以飲食",
+        "光線相關": "室內有燈具，光線稍嫌不足；受到自然光影響，白天所有座位光線\n更加充足",
+        "地點": "https://map.ntu.edu.tw/index.html?height=3321&cx=13529519.0\n3312773&cy=2877954.066743617&layer=bnR1X2J1aWxkaW5\nnX2JvdW5k&apKey=Mw==",
+        "說明": "",
+        "記錄者": "陳子罃",
+        "照片": "PDF 第 5 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "4F",
+            "minimum": 12,
+            "maximum": 12,
+            "estimated": false
+          },
+          {
+            "label": "5F",
+            "minimum": 12,
+            "maximum": 12,
+            "estimated": false
+          },
+          {
+            "label": "6F",
+            "minimum": 12,
+            "maximum": 12,
+            "estimated": false
+          }
+        ],
+        "minimum": 36,
+        "maximum": 36,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": null,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": "部分靠牆位置",
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "低",
+        "noiseSources": [
+          "他人對話",
+          "上課聲音",
+          "下課喧鬧"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "能正常出聲討論",
+        "note": null
+      },
+      "openness": "室內開放空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": false,
+        "fan": true,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "insufficient",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=3321&cx=13529519.03312773&cy=2877954.066743617&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=Mw==",
+        "originalMapKey": 3,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529519.03312773,
+          "y": 2877954.066743617,
+          "wgs84": [
+            121.53773734,
+            25.01798686
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01820724,
+          "longitude": 121.53950271,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.249",
+          "buildingUid": "AT2049",
+          "officialName": "綜合教學館",
+          "verifiedMapKey": 1864
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "陳子罃",
+      "photos": [
+        {
+          "src": "images/s04-01.jpg",
+          "alt": "綜合教學館 4~6F 開放空間，PDF 原始照片 1",
+          "sourcePage": 5,
+          "sourceImage": 1,
+          "sha256": "32e252a318b75fac87c3e0d4c85288bc0494f4b9f864cd9a1f03aa785bc19e46"
+        }
+      ],
+      "issueIds": [
+        "wrong-map-key",
+        "unknown-counts"
+      ]
+    },
+    {
+      "id": "s05",
+      "name": "博雅教學館–1F–開放空間",
+      "title": "開放空間",
+      "building": "博雅教學館",
+      "floor": "1F",
+      "source": {
+        "pages": [
+          6,
+          7
+        ],
+        "fieldPages": {
+          "名稱": [
+            6
+          ],
+          "席位": [
+            6
+          ],
+          "插座": [
+            6
+          ],
+          "安靜程度": [
+            6
+          ],
+          "空間開放程度": [
+            6
+          ],
+          "是否需要學生證": [
+            6
+          ],
+          "空調": [
+            6
+          ],
+          "飲食": [
+            6
+          ],
+          "光線相關": [
+            6
+          ],
+          "地點": [
+            6
+          ],
+          "說明": [
+            6
+          ],
+          "記錄者": [
+            6
+          ],
+          "照片": [
+            7
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "博雅教學館–1F–開放空間",
+        "席位": "約100席",
+        "插座": "約24席（窗邊座位）",
+        "安靜程度": "安靜程度低；\n可能聲音來源包含他人對話、下課喧鬧；\n能正常出聲討論",
+        "空間開放程度": "室內開放空間︰建築物內無另外的獨立出入口，或無法完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "無空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "室內有燈具，光線充足；受自然光影響",
+        "地點": "https://map.ntu.edu.tw/index.html?height=463&cx=13529403.54\n910182&cy=2878049.410825786&layer=bnR1X2J1aWxkaW5n\nX2JvdW5k&apKey=MjI3",
+        "說明": "",
+        "記錄者": "陳子罃",
+        "照片": "PDF 第 7 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "1F",
+            "minimum": 100,
+            "maximum": 100,
+            "estimated": true
+          }
+        ],
+        "minimum": 100,
+        "maximum": 100,
+        "estimated": true,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": 24,
+        "estimated": true,
+        "knownSeatRange": null,
+        "location": "窗邊座位",
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "低",
+        "noiseSources": [
+          "他人對話",
+          "下課喧鬧"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "能正常出聲討論",
+        "note": null
+      },
+      "openness": "室內開放空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": false,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=463&cx=13529403.54910182&cy=2878049.410825786&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MjI3",
+        "originalMapKey": 227,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529403.54910182,
+          "y": 2878049.410825786,
+          "wgs84": [
+            121.53669993,
+            25.01876299
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01889004,
+          "longitude": 121.53669692,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.250",
+          "buildingUid": "AT1044",
+          "officialName": "博雅教學館",
+          "verifiedMapKey": 227
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "陳子罃",
+      "photos": [
+        {
+          "src": "images/s05-01.jpg",
+          "alt": "博雅教學館 1F 開放空間，PDF 原始照片 1",
+          "sourcePage": 7,
+          "sourceImage": 1,
+          "sha256": "f90d842434a666716cc02bf962678f3719e5290099ca000f6a3240600c77c2a5"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s06",
+      "name": "管理學院一號館–1F–開放空間",
+      "title": "開放空間",
+      "building": "管理學院一號館",
+      "floor": "1F",
+      "source": {
+        "pages": [
+          7,
+          8
+        ],
+        "fieldPages": {
+          "名稱": [
+            7
+          ],
+          "席位": [
+            7
+          ],
+          "插座": [
+            7
+          ],
+          "安靜程度": [
+            7
+          ],
+          "空間開放程度": [
+            7
+          ],
+          "是否需要學生證": [
+            7
+          ],
+          "空調": [
+            7
+          ],
+          "飲食": [
+            7
+          ],
+          "光線相關": [
+            7,
+            8
+          ],
+          "地點": [
+            8
+          ],
+          "說明": [
+            8
+          ],
+          "記錄者": [
+            8
+          ],
+          "照片": [
+            8
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "管理學院一號館–1F–開放空間",
+        "席位": "19席",
+        "插座": "有插座，全部位置皆可以使用插座",
+        "安靜程度": "● 安靜程度：低\n● 可能聲音來源：路人說話聲、打掃人員清潔聲、其他使用者說\n話聲\n● 能否出聲討論：開放正常討論",
+        "空間開放程度": "室內開放空間︰建築物內無另外的獨立出入口，或無法完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "無空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "● 室內燈具：有，光線不充足\n● 是否受自然光線影響：是\n● 附註：部分靠窗座位受到自然光線影響，有自然光時光線充足\n，無自然光時稍微昏暗",
+        "地點": "https://map.ntu.edu.tw/index.html?height=414&cx=13529420.26\n279863&cy=2877416.245941036&layer=bnR1X2J1aWxkaW5n\nX2JvdW5k&apKey=OTA=",
+        "說明": "",
+        "記錄者": "郭亮纖",
+        "照片": "PDF 第 8 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "1F",
+            "minimum": 19,
+            "maximum": 19,
+            "estimated": false
+          }
+        ],
+        "minimum": 19,
+        "maximum": 19,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "all",
+        "knownSeats": 19,
+        "estimated": false,
+        "knownSeatRange": {
+          "minimum": 19,
+          "maximum": 19,
+          "estimated": false,
+          "basis": "由全部座位可用與紀錄席位推得，非插座數量。"
+        },
+        "location": null,
+        "knownSeatsBasis": "依 PDF 原文；管理學院一號館 19 席由全部位置可用與總席位推得。"
+      },
+      "quietness": {
+        "level": "低",
+        "noiseSources": [
+          "路人說話聲",
+          "打掃人員清潔聲",
+          "其他使用者說話聲"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放正常討論",
+        "note": null
+      },
+      "openness": "室內開放空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": false,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "insufficient",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=414&cx=13529420.26279863&cy=2877416.245941036&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=OTA=",
+        "originalMapKey": 90,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529420.26279863,
+          "y": 2877416.245941036,
+          "wgs84": [
+            121.53685007,
+            25.01360876
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01390928,
+          "longitude": 121.53800796,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.58",
+          "buildingUid": "AT4025",
+          "officialName": "管理學院一號館",
+          "verifiedMapKey": 90
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "郭亮纖",
+      "photos": [
+        {
+          "src": "images/s06-01.jpg",
+          "alt": "管理學院一號館 1F 開放空間，PDF 原始照片 1",
+          "sourcePage": 8,
+          "sourceImage": 1,
+          "sha256": "a990d3c008f1ade9a01d97ad69a08942f94a8f305bfdced7ecb37e4b0ca16e24"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s07",
+      "name": "管理學院二號館–1F–開放空間",
+      "title": "開放空間",
+      "building": "管理學院二號館",
+      "floor": "1F",
+      "source": {
+        "pages": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "fieldPages": {
+          "名稱": [
+            8
+          ],
+          "席位": [
+            8
+          ],
+          "插座": [
+            8
+          ],
+          "安靜程度": [
+            8
+          ],
+          "空間開放程度": [
+            8
+          ],
+          "是否需要學生證": [
+            8
+          ],
+          "空調": [
+            9
+          ],
+          "飲食": [
+            9
+          ],
+          "光線相關": [
+            9
+          ],
+          "地點": [
+            9
+          ],
+          "說明": [
+            9
+          ],
+          "記錄者": [
+            9
+          ],
+          "照片": [
+            9
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "管理學院二號館–1F–開放空間",
+        "席位": "56席",
+        "插座": "有插座，部分位置可以使用插座（部分靠牆座位有插座，但距離位\n子皆稍微有點距離）",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：路人說話聲、打掃人員清潔聲、其他使用者說\n話聲\n● 能否出聲討論：開放正常討論\n● 附註：開放討論但現場很安靜",
+        "空間開放程度": "室內開放空間︰建築物內無另外的獨立出入口，或無法完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "無空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "● 室內燈具：有，光線不充足\n● 是否受自然光線影響：是\n● 附註：部分靠窗座位受到自然光線影響，有自然光時光線充足\n，無自然光時稍微昏暗",
+        "地點": "https://map.ntu.edu.tw/index.html?height=414&cx=13529420.26\n279863&cy=2877416.245941036&layer=bnR1X2J1aWxkaW5n\nX2JvdW5k&apKey=ODc=",
+        "說明": "",
+        "記錄者": "郭亮纖",
+        "照片": "PDF 第 9、10、11 頁，共 4 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "1F",
+            "minimum": 56,
+            "maximum": 56,
+            "estimated": false
+          }
+        ],
+        "minimum": 56,
+        "maximum": 56,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": null,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": "部分靠牆座位，但距離位子皆稍微有點距離",
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "路人說話聲",
+          "打掃人員清潔聲",
+          "其他使用者說話聲"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放正常討論",
+        "note": "開放討論但現場很安靜"
+      },
+      "openness": "室內開放空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": false,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "insufficient",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=414&cx=13529420.26279863&cy=2877416.245941036&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=ODc=",
+        "originalMapKey": 87,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529420.26279863,
+          "y": 2877416.245941036,
+          "wgs84": [
+            121.53685007,
+            25.01360876
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01312391,
+          "longitude": 121.53686793,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.59",
+          "buildingUid": "AT4030-1",
+          "officialName": "管理學院二號館",
+          "verifiedMapKey": 87
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "郭亮纖",
+      "photos": [
+        {
+          "src": "images/s07-01.jpg",
+          "alt": "管理學院二號館 1F 開放空間，PDF 原始照片 1",
+          "sourcePage": 9,
+          "sourceImage": 1,
+          "sha256": "454a8a448af31aceccb6f880156588fb65460e29ccf957456c622f960bb9c0f0"
+        },
+        {
+          "src": "images/s07-02.jpg",
+          "alt": "管理學院二號館 1F 開放空間，PDF 原始照片 2",
+          "sourcePage": 10,
+          "sourceImage": 1,
+          "sha256": "5d32d166a5898cb88ad600bdf7460c4907c3e335b4f134fda6b2155ae82e5836"
+        },
+        {
+          "src": "images/s07-03.jpg",
+          "alt": "管理學院二號館 1F 開放空間，PDF 原始照片 3",
+          "sourcePage": 10,
+          "sourceImage": 2,
+          "sha256": "6a4181fb317645a71d3af0bb5786bccf521c6b15e135e4f9e8e96b1f8b977bbe"
+        },
+        {
+          "src": "images/s07-04.jpg",
+          "alt": "管理學院二號館 1F 開放空間，PDF 原始照片 4",
+          "sourcePage": 11,
+          "sourceImage": 1,
+          "sha256": "39bfb675fd012c2bdac4c6763936f80ea4732e69168fad28eac4954d074709a0"
+        }
+      ],
+      "issueIds": [
+        "unknown-counts"
+      ]
+    },
+    {
+      "id": "s08",
+      "name": "第二活動中心–3F–沃斯空間",
+      "title": "沃斯空間",
+      "building": "第二活動中心",
+      "floor": "3F",
+      "source": {
+        "pages": [
+          11,
+          12
+        ],
+        "fieldPages": {
+          "名稱": [
+            11
+          ],
+          "席位": [
+            11
+          ],
+          "插座": [
+            11
+          ],
+          "安靜程度": [
+            11
+          ],
+          "空間開放程度": [
+            11
+          ],
+          "是否需要學生證": [
+            11
+          ],
+          "空調": [
+            11
+          ],
+          "飲食": [
+            11
+          ],
+          "光線相關": [
+            11
+          ],
+          "地點": [
+            11
+          ],
+          "說明": [
+            12
+          ],
+          "記錄者": [
+            12
+          ],
+          "照片": [
+            12
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "第二活動中心–3F–沃斯空間",
+        "席位": "59席",
+        "插座": "有插座，部分位置可以使用插座（8席）",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：路人說話聲、打掃人員清潔聲、其他使用者說\n話聲\n● 能否出聲討論：開放正常討論",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "有空調，有風扇\n附註：空調跟風扇不一定會開",
+        "飲食": "可以飲食",
+        "光線相關": "● 室內燈具：有，光線不充足\n● 是否受自然光線影響：是\n● 附註：部分靠窗座位受到自然光線影響，有自然光時光線充足\n，無自然光時稍微昏暗",
+        "地點": "https://map.ntu.edu.tw/index.html?height=414&cx=13529420.26\n279863&cy=2877416.245941036&layer=bnR1X2J1aWxkaW5n\nX2JvdW5k&apKey=ODY=",
+        "說明": "● 如遇到場地外借不開放，可以上官網查詢，當天入口也有告示\n牌公告，週一不開放外借\n● 場地租借狀況查詢：\nhttps://my.ntu.edu.tw/venuerental/Home/BuildingSchedule?\nDate=2026–10–02&BuildingId=2",
+        "記錄者": "郭亮纖",
+        "照片": "PDF 第 12 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "3F",
+            "minimum": 59,
+            "maximum": 59,
+            "estimated": false
+          }
+        ],
+        "minimum": 59,
+        "maximum": 59,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": 8,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "路人說話聲",
+          "打掃人員清潔聲",
+          "其他使用者說話聲"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放正常討論",
+        "note": null
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": true,
+        "fan": true,
+        "note": "空調跟風扇不一定會開"
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "insufficient",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=414&cx=13529420.26279863&cy=2877416.245941036&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=ODY=",
+        "originalMapKey": 86,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529420.26279863,
+          "y": 2877416.245941036,
+          "wgs84": [
+            121.53685007,
+            25.01360876
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01295718,
+          "longitude": 121.53661014,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.26",
+          "buildingUid": "AT4030",
+          "officialName": "第二學生活動中心",
+          "verifiedMapKey": 86
+        },
+        "entranceNote": null
+      },
+      "description": "● 如遇到場地外借不開放，可以上官網查詢，當天入口也有告示\n牌公告，週一不開放外借\n● 場地租借狀況查詢：\nhttps://my.ntu.edu.tw/venuerental/Home/BuildingSchedule?\nDate=2026–10–02&BuildingId=2",
+      "externalLinks": [
+        {
+          "label": "場地租借狀況查詢",
+          "displayText": "https://my.ntu.edu.tw/venuerental/Home/BuildingSchedule?Date=2026–10–02&BuildingId=2",
+          "url": "https://my.ntu.edu.tw/venuerental/Home/BuildingSchedule?Date=2026-10-02&BuildingId=2",
+          "sourcePage": 12,
+          "source": "PDF /Annots /A /URI"
+        }
+      ],
+      "recorder": "郭亮纖",
+      "photos": [
+        {
+          "src": "images/s08-01.jpg",
+          "alt": "第二活動中心 3F 沃斯空間，PDF 原始照片 1",
+          "sourcePage": 12,
+          "sourceImage": 1,
+          "sha256": "81798ddd3b9e21515eac3967c2685808bb862e2e22b69122c276af3406cd92e5"
+        }
+      ],
+      "issueIds": [
+        "rental-link",
+        "rental-wording"
+      ]
+    },
+    {
+      "id": "s09",
+      "name": "中研院原子與分子科學研究所–2~3F–化學系圖書館",
+      "title": "化學系圖書館",
+      "building": "中研院原子與分子科學研究所",
+      "floor": "2~3F",
+      "source": {
+        "pages": [
+          12,
+          13
+        ],
+        "fieldPages": {
+          "名稱": [
+            12
+          ],
+          "席位": [
+            12
+          ],
+          "插座": [
+            12
+          ],
+          "安靜程度": [
+            12
+          ],
+          "空間開放程度": [
+            12
+          ],
+          "是否需要學生證": [
+            12
+          ],
+          "空調": [
+            12
+          ],
+          "飲食": [
+            12
+          ],
+          "光線相關": [
+            12,
+            13
+          ],
+          "地點": [
+            13
+          ],
+          "說明": [
+            13
+          ],
+          "記錄者": [
+            13
+          ],
+          "照片": [
+            13
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "中研院原子與分子科學研究所–2~3F–化學系圖書館",
+        "席位": "二樓：15席\n三樓：10席",
+        "插座": "有插座，部分位置可以使用插座（19席）",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：他人使用電腦的聲音、翻頁聲\n● 能否出聲討論：不開放討論",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "禁止飲食",
+        "光線相關": "● 室內燈具：有，光線充足\n● 是否受自然光線影響：否\n● 附註：各座位有獨立照明設備",
+        "地點": "https://map.ntu.edu.tw/index.html?height=626&cx=13529524.09\n7493712&cy=2878123.0882691834&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTUw\n附註：出入口位於「中研院原子與分子科學研究所」二樓，三樓無出\n入口。",
+        "說明": "● 入館需抵押臺大學生證，並換取置物櫃鑰匙後，包包等不需要\n使用的物品鎖入置物櫃後方可入館。\n● 館內有影印機1台與影印用電腦座位6席。",
+        "記錄者": "郭亮纖",
+        "照片": "PDF 第 13 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "二樓",
+            "minimum": 15,
+            "maximum": 15,
+            "estimated": false
+          },
+          {
+            "label": "三樓",
+            "minimum": 10,
+            "maximum": 10,
+            "estimated": false
+          }
+        ],
+        "minimum": 25,
+        "maximum": 25,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": 19,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "他人使用電腦的聲音",
+          "翻頁聲"
+        ],
+        "discussion": "prohibited",
+        "discussionOriginal": "不開放討論",
+        "note": null
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": true,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": false,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": false,
+        "independentLighting": true,
+        "independentSeats": null,
+        "independentScope": "各座位"
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=626&cx=13529524.097493712&cy=2878123.0882691834&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTUw",
+        "originalMapKey": 150,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529524.097493712,
+          "y": 2878123.0882691834,
+          "wgs84": [
+            121.53778284,
+            25.01936274
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01868047,
+          "longitude": 121.5382682,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.6",
+          "buildingUid": "AN1024",
+          "officialName": "原分所",
+          "verifiedMapKey": 150
+        },
+        "entranceNote": "出入口位於「中研院原子與分子科學研究所」二樓，三樓無出入口。"
+      },
+      "description": "● 入館需抵押臺大學生證，並換取置物櫃鑰匙後，包包等不需要\n使用的物品鎖入置物櫃後方可入館。\n● 館內有影印機1台與影印用電腦座位6席。",
+      "externalLinks": [],
+      "recorder": "郭亮纖",
+      "photos": [
+        {
+          "src": "images/s09-01.jpg",
+          "alt": "中研院原子與分子科學研究所 2~3F 化學系圖書館，PDF 原始照片 1",
+          "sourcePage": 13,
+          "sourceImage": 1,
+          "sha256": "d3a933238cd5550dafaa34d90b64a40ca57ef5dc7fabbd30f7509dfe8aeb774b"
+        }
+      ],
+      "issueIds": [
+        "chemistry-photo"
+      ]
+    },
+    {
+      "id": "s10",
+      "name": "萬才館–1~2F–法律學院圖書館",
+      "title": "法律學院圖書館",
+      "building": "萬才館",
+      "floor": "1~2F",
+      "source": {
+        "pages": [
+          13,
+          14
+        ],
+        "fieldPages": {
+          "名稱": [
+            13
+          ],
+          "席位": [
+            13
+          ],
+          "插座": [
+            13
+          ],
+          "安靜程度": [
+            13
+          ],
+          "空間開放程度": [
+            13
+          ],
+          "是否需要學生證": [
+            14
+          ],
+          "空調": [
+            14
+          ],
+          "飲食": [
+            14
+          ],
+          "光線相關": [
+            14
+          ],
+          "地點": [
+            14
+          ],
+          "說明": [
+            14
+          ],
+          "記錄者": [
+            14
+          ],
+          "照片": [
+            14
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "萬才館–1~2F–法律學院圖書館",
+        "席位": "一樓：96席\n二樓：86席",
+        "插座": "無插座",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：他人使用電腦的聲音、翻頁聲\n● 能否出聲討論：不開放討論",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "禁止飲食",
+        "光線相關": "● 室內燈具：有，光線充足\n● 是否受自然光線影響：否\n● 附註：各座位有獨立照明設備",
+        "地點": "https://map.ntu.edu.tw/index.html?height=349&cx=13530247.05\n8626521&cy=2878189.7060278147&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MjA0\n附註：出入口位於「萬才館」建築物一樓入口處左轉，二樓無出入\n口。",
+        "說明": "● 館內有影印機4台與影印用電腦座位4席，一樓入口處有影印\n卡自動販賣機。\n● 週遭無飲水機，但館外門口有飲料跟食物販賣機。",
+        "記錄者": "郭亮纖",
+        "照片": "PDF 第 14 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "一樓",
+            "minimum": 96,
+            "maximum": 96,
+            "estimated": false
+          },
+          {
+            "label": "二樓",
+            "minimum": 86,
+            "maximum": 86,
+            "estimated": false
+          }
+        ],
+        "minimum": 182,
+        "maximum": 182,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "none",
+        "knownSeats": 0,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "他人使用電腦的聲音",
+          "翻頁聲"
+        ],
+        "discussion": "prohibited",
+        "discussionOriginal": "不開放討論",
+        "note": null
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": true,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": false,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": false,
+        "independentLighting": true,
+        "independentSeats": null,
+        "independentScope": "各座位"
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=349&cx=13530247.058626521&cy=2878189.7060278147&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MjA0",
+        "originalMapKey": 204,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13530247.058626521,
+          "y": 2878189.7060278147,
+          "wgs84": [
+            121.54427731,
+            25.01990502
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01993511,
+          "longitude": 121.54478262,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.217",
+          "buildingUid": "AT3045",
+          "officialName": "萬才館",
+          "verifiedMapKey": 204
+        },
+        "entranceNote": "出入口位於「萬才館」建築物一樓入口處左轉，二樓無出入口。"
+      },
+      "description": "● 館內有影印機4台與影印用電腦座位4席，一樓入口處有影印\n卡自動販賣機。\n● 週遭無飲水機，但館外門口有飲料跟食物販賣機。",
+      "externalLinks": [],
+      "recorder": "郭亮纖",
+      "photos": [
+        {
+          "src": "images/s10-01.jpg",
+          "alt": "萬才館 1~2F 法律學院圖書館，PDF 原始照片 1",
+          "sourcePage": 14,
+          "sourceImage": 1,
+          "sha256": "a82d3cc29809540a2b3bfbf31ed1c2d87250acd3d8e6d52fe68f06fbbfc62454"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s11",
+      "name": "共同教學館–3F–開放空間",
+      "title": "開放空間",
+      "building": "共同教學館",
+      "floor": "3F",
+      "source": {
+        "pages": [
+          15
+        ],
+        "fieldPages": {
+          "名稱": [
+            15
+          ],
+          "席位": [
+            15
+          ],
+          "插座": [
+            15
+          ],
+          "安靜程度": [
+            15
+          ],
+          "空間開放程度": [
+            15
+          ],
+          "是否需要學生證": [
+            15
+          ],
+          "空調": [
+            15
+          ],
+          "飲食": [
+            15
+          ],
+          "光線相關": [
+            15
+          ],
+          "地點": [
+            15
+          ],
+          "說明": [
+            15
+          ],
+          "記錄者": [
+            15
+          ],
+          "照片": [
+            15
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "共同教學館–3F–開放空間",
+        "席位": "約70席",
+        "插座": "無插座",
+        "安靜程度": "● 安靜程度：低\n● 可能聲音來源：鄰近教室的教師授課聲、室外環境聲響如鳥鳴\n聲\n● 能否出聲討論：開放正常討論",
+        "空間開放程度": "半室內︰位於建築物內具有屋頂，但無法完全封閉，會受天氣影響",
+        "是否需要學生證": "不需要學生證",
+        "空調": "無空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "● 室內燈具：無\n● 是否受自然光線影響：是\n● 附註：全部座位受到自然光線影響：有自然光時光線充足，無自\n然光時完全昏暗",
+        "地點": "https://map.ntu.edu.tw/index.html?height=426&cx=13529503.77\n0598682&cy=2877682.9369868804&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTIy",
+        "說明": "",
+        "記錄者": "許凱琳",
+        "照片": "PDF 第 15 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "3F",
+            "minimum": 70,
+            "maximum": 70,
+            "estimated": true
+          }
+        ],
+        "minimum": 70,
+        "maximum": 70,
+        "estimated": true,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "none",
+        "knownSeats": 0,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "低",
+        "noiseSources": [
+          "鄰近教室的教師授課聲",
+          "室外環境聲響如鳥鳴聲"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放正常討論",
+        "note": null
+      },
+      "openness": "半室內",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": false,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": false,
+        "indoorAdequacy": "none",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=426&cx=13529503.770598682&cy=2877682.9369868804&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTIy",
+        "originalMapKey": 122,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529503.770598682,
+          "y": 2877682.9369868804,
+          "wgs84": [
+            121.53760024,
+            25.01577976
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01582284,
+          "longitude": 121.53757318,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.245",
+          "buildingUid": "AT2038",
+          "officialName": "共同教學館",
+          "verifiedMapKey": 122
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "許凱琳",
+      "photos": [
+        {
+          "src": "images/s11-01.jpg",
+          "alt": "共同教學館 3F 開放空間，PDF 原始照片 1",
+          "sourcePage": 15,
+          "sourceImage": 1,
+          "sha256": "9b6f5480a040604c1dad7e1e2875b611b69558452c7545dd31c41c6bb18f9327"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s12",
+      "name": "圖書資訊館–2F–圖資系實習圖書館",
+      "title": "圖資系實習圖書館",
+      "building": "圖書資訊館",
+      "floor": "2F",
+      "source": {
+        "pages": [
+          16
+        ],
+        "fieldPages": {
+          "名稱": [
+            16
+          ],
+          "席位": [
+            16
+          ],
+          "插座": [
+            16
+          ],
+          "安靜程度": [
+            16
+          ],
+          "空間開放程度": [
+            16
+          ],
+          "是否需要學生證": [
+            16
+          ],
+          "空調": [
+            16
+          ],
+          "飲食": [
+            16
+          ],
+          "光線相關": [
+            16
+          ],
+          "地點": [
+            16
+          ],
+          "說明": [
+            16
+          ],
+          "記錄者": [
+            16
+          ],
+          "照片": [
+            16
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "圖書資訊館–2F–圖資系實習圖書館",
+        "席位": "54席",
+        "插座": "有插座，部分位置可以使用插座（8席）",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：他人使用電腦的聲音、翻頁聲\n● 能否出聲討論：不開放討論",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "禁止飲食",
+        "光線相關": "● 室內燈具：有，光線充足\n● 是否受自然光線影響：否\n● 附註：少部分座位有獨立照明設備，共計8席",
+        "地點": "https://map.ntu.edu.tw/index.html?height=426&cx=13529707.08\n9850899&cy=2877902.1601771466&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTA5",
+        "說明": "● 包包需要鎖入置物櫃後方可入館",
+        "記錄者": "許凱琳",
+        "照片": "PDF 第 16 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "2F",
+            "minimum": 54,
+            "maximum": 54,
+            "estimated": false
+          }
+        ],
+        "minimum": 54,
+        "maximum": 54,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": 8,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "他人使用電腦的聲音",
+          "翻頁聲"
+        ],
+        "discussion": "prohibited",
+        "discussionOriginal": "不開放討論",
+        "note": null
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": false,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": false,
+        "independentLighting": true,
+        "independentSeats": 8,
+        "independentScope": "少部分座位，共計8席"
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=426&cx=13529707.089850899&cy=2877902.1601771466&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTA5",
+        "originalMapKey": 109,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529707.089850899,
+          "y": 2877902.1601771466,
+          "wgs84": [
+            121.53942668,
+            25.01756433
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01787328,
+          "longitude": 121.53938884,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.157",
+          "buildingUid": "AT2010",
+          "officialName": "圖書資訊館",
+          "verifiedMapKey": 109
+        },
+        "entranceNote": "● 包包需要鎖入置物櫃後方可入館"
+      },
+      "description": "● 包包需要鎖入置物櫃後方可入館",
+      "externalLinks": [],
+      "recorder": "許凱琳",
+      "photos": [
+        {
+          "src": "images/s12-01.jpg",
+          "alt": "圖書資訊館 2F 圖資系實習圖書館，PDF 原始照片 1",
+          "sourcePage": 16,
+          "sourceImage": 1,
+          "sha256": "b27c194f89b08bdb95263f25167fc3a174f91d30409b6ff4da8b44864947761c"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s13",
+      "name": "社會科學院大樓–3F–開放空間",
+      "title": "開放空間",
+      "building": "社會科學院大樓",
+      "floor": "3F",
+      "source": {
+        "pages": [
+          17
+        ],
+        "fieldPages": {
+          "名稱": [
+            17
+          ],
+          "席位": [
+            17
+          ],
+          "插座": [
+            17
+          ],
+          "安靜程度": [
+            17
+          ],
+          "空間開放程度": [
+            17
+          ],
+          "是否需要學生證": [
+            17
+          ],
+          "空調": [
+            17
+          ],
+          "飲食": [
+            17
+          ],
+          "光線相關": [
+            17
+          ],
+          "地點": [
+            17
+          ],
+          "說明": [
+            17
+          ],
+          "記錄者": [
+            17
+          ],
+          "照片": [
+            17
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "社會科學院大樓–3F–開放空間",
+        "席位": "47席",
+        "插座": "有插座，部分位置可以使用插座（17席）",
+        "安靜程度": "● 安靜程度：中\n● 可能聲音來源：其他使用者說話聲、室外環境聲響如車輛行駛\n聲\n● 能否出聲討論：開放討論",
+        "空間開放程度": "室內開放空間︰建築物內無另外的獨立出入口，或無法完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "● 室內燈具：有，光線充足\n● 是否受自然光線影響：是",
+        "地點": "https://map.ntu.edu.tw/index.html?height=426&cx=13529996.21\n1124042&cy=2878224.9994657207&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTY1MA==\n附註：從社會科學院東側門進入，電梯搭乘至三樓",
+        "說明": "",
+        "記錄者": "許凱琳",
+        "照片": "PDF 第 17 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "3F",
+            "minimum": 47,
+            "maximum": 47,
+            "estimated": false
+          }
+        ],
+        "minimum": 47,
+        "maximum": 47,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": 17,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "中",
+        "noiseSources": [
+          "其他使用者說話聲",
+          "室外環境聲響如車輛行駛聲"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放討論",
+        "note": null
+      },
+      "openness": "室內開放空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": true,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=426&cx=13529996.211124042&cy=2878224.9994657207&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTY1MA==",
+        "originalMapKey": 1650,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529996.211124042,
+          "y": 2878224.9994657207,
+          "wgs84": [
+            121.54202391,
+            25.02019232
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.02062044,
+          "longitude": 121.54232221,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.254",
+          "buildingUid": "AT3046",
+          "officialName": "社會科學院大樓",
+          "verifiedMapKey": 1650
+        },
+        "entranceNote": "從社會科學院東側門進入，電梯搭乘至三樓"
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "許凱琳",
+      "photos": [
+        {
+          "src": "images/s13-01.jpg",
+          "alt": "社會科學院大樓 3F 開放空間，PDF 原始照片 1",
+          "sourcePage": 17,
+          "sourceImage": 1,
+          "sha256": "18f35556ebbc53f57b25eda852916f7ebb5e23269de88c8d2defb94aeb3206b8"
+        }
+      ],
+      "issueIds": []
+    },
+    {
+      "id": "s14",
+      "name": "社會科學院大樓–1~2F–辜振甫先生紀念圖書館",
+      "title": "辜振甫先生紀念圖書館",
+      "building": "社會科學院大樓",
+      "floor": "1~2F",
+      "source": {
+        "pages": [
+          18
+        ],
+        "fieldPages": {
+          "名稱": [
+            18
+          ],
+          "席位": [
+            18
+          ],
+          "插座": [
+            18
+          ],
+          "安靜程度": [
+            18
+          ],
+          "空間開放程度": [
+            18
+          ],
+          "是否需要學生證": [
+            18
+          ],
+          "空調": [
+            18
+          ],
+          "飲食": [
+            18
+          ],
+          "光線相關": [
+            18
+          ],
+          "地點": [
+            18
+          ],
+          "說明": [
+            18
+          ],
+          "記錄者": [
+            18
+          ],
+          "照片": [
+            18
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "社會科學院大樓–1~2F–辜振甫先生紀念圖書館",
+        "席位": "一樓︰115席\n二樓︰192席",
+        "插座": "有插座，部分位置可以使用插座",
+        "安靜程度": "● 安靜程度：高\n● 可能聲音來源：他人使用電腦的聲音、翻頁聲、其他使用者走\n動的聲音\n● 能否出聲討論：開放討論",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "禁止飲食",
+        "光線相關": "● 室內燈具：有，光線充足\n● 是否受自然光線影響：是\n● 大部分座位有獨立照明設備",
+        "地點": "https://map.ntu.edu.tw/index.html?height=426&cx=13529996.21\n1124042&cy=2878224.9994657207&layer=bnR1X2J1aWxkaW\n5nX2JvdW5k&apKey=MTY1MA==",
+        "說明": "",
+        "記錄者": "許凱琳",
+        "照片": "PDF 第 18 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "一樓",
+            "minimum": 115,
+            "maximum": 115,
+            "estimated": false
+          },
+          {
+            "label": "二樓",
+            "minimum": 192,
+            "maximum": 192,
+            "estimated": false
+          }
+        ],
+        "minimum": 307,
+        "maximum": 307,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": null,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "高",
+        "noiseSources": [
+          "他人使用電腦的聲音",
+          "翻頁聲",
+          "其他使用者走動的聲音"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放討論",
+        "note": null
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": true,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": false,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": true,
+        "independentLighting": true,
+        "independentSeats": null,
+        "independentScope": "大部分座位"
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=426&cx=13529996.211124042&cy=2878224.9994657207&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MTY1MA==",
+        "originalMapKey": 1650,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529996.211124042,
+          "y": 2878224.9994657207,
+          "wgs84": [
+            121.54202391,
+            25.02019232
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.02062044,
+          "longitude": 121.54232221,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.254",
+          "buildingUid": "AT3046",
+          "officialName": "社會科學院大樓",
+          "verifiedMapKey": 1650
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "許凱琳",
+      "photos": [
+        {
+          "src": "images/s14-01.jpg",
+          "alt": "社會科學院大樓 1~2F 辜振甫先生紀念圖書館，PDF 原始照片 1",
+          "sourcePage": 18,
+          "sourceImage": 1,
+          "sha256": "21ec1c981411012ff01be81cd0c077d94af75695c35602d7e43768d02165408f"
+        }
+      ],
+      "issueIds": [
+        "unknown-counts"
+      ]
+    },
+    {
+      "id": "s15",
+      "name": "新生教學館–1.5F–討論室",
+      "title": "討論室",
+      "building": "新生教學館",
+      "floor": "1.5F",
+      "source": {
+        "pages": [
+          19
+        ],
+        "fieldPages": {
+          "名稱": [
+            19
+          ],
+          "席位": [
+            19
+          ],
+          "插座": [
+            19
+          ],
+          "安靜程度": [
+            19
+          ],
+          "空間開放程度": [
+            19
+          ],
+          "是否需要學生證": [
+            19
+          ],
+          "空調": [
+            19
+          ],
+          "飲食": [
+            19
+          ],
+          "光線相關": [
+            19
+          ],
+          "地點": [
+            19
+          ],
+          "說明": [
+            19
+          ],
+          "記錄者": [
+            19
+          ],
+          "照片": [
+            19
+          ]
+        }
+      },
+      "raw": {
+        "名稱": "新生教學館–1.5F–討論室",
+        "席位": "10席",
+        "插座": "有插座，部分位置可以使用插座",
+        "安靜程度": "● 安靜程度：中\n● 可能聲音來源：他人使用電腦的聲音、翻頁聲、討論的聲音\n● 能否出聲討論：開放討論",
+        "空間開放程度": "室內獨立空間︰建築物內另外有獨立出入口，且可以完全封閉",
+        "是否需要學生證": "不需要學生證",
+        "空調": "有空調，無風扇",
+        "飲食": "可以飲食",
+        "光線相關": "● 室內燈具：有，光線充足\n● 是否受自然光線影響：否",
+        "地點": "https://map.ntu.edu.tw/index.html?height=426&cx=13529632.50\n9347174&cy=2878219.123013362&layer=bnR1X2J1aWxkaW5\nnX2JvdW5k&apKey=MjAw",
+        "說明": "",
+        "記錄者": "許凱琳",
+        "照片": "PDF 第 19 頁，共 1 張原始照片。"
+      },
+      "seats": {
+        "areas": [
+          {
+            "label": "1.5F",
+            "minimum": 10,
+            "maximum": 10,
+            "estimated": false
+          }
+        ],
+        "minimum": 10,
+        "maximum": 10,
+        "estimated": false,
+        "basis": "紀錄總席位，非即時空位；總數不含另列影印用電腦座位。"
+      },
+      "outlets": {
+        "coverage": "partial",
+        "knownSeats": null,
+        "estimated": false,
+        "knownSeatRange": null,
+        "location": null,
+        "knownSeatsBasis": "依 PDF 插座欄位原文。"
+      },
+      "quietness": {
+        "level": "中",
+        "noiseSources": [
+          "他人使用電腦的聲音",
+          "翻頁聲",
+          "討論的聲音"
+        ],
+        "discussion": "allowed",
+        "discussionOriginal": "開放討論",
+        "note": null
+      },
+      "openness": "室內獨立空間",
+      "studentCardRequired": false,
+      "climate": {
+        "airConditioning": true,
+        "fan": false,
+        "note": null
+      },
+      "foodAllowed": true,
+      "lighting": {
+        "indoorFixtures": true,
+        "indoorAdequacy": "sufficient",
+        "naturalLightAffected": false,
+        "independentLighting": null,
+        "independentSeats": null,
+        "independentScope": null
+      },
+      "location": {
+        "officialMapUrl": "https://map.ntu.edu.tw/index.html?height=426&cx=13529632.509347174&cy=2878219.123013362&layer=bnR1X2J1aWxkaW5nX2JvdW5k&apKey=MjAw",
+        "originalMapKey": 200,
+        "originalViewCenter": {
+          "crs": "EPSG:3857",
+          "x": 13529632.509347174,
+          "y": 2878219.123013362,
+          "wgs84": [
+            121.53875672,
+            25.02014448
+          ]
+        },
+        "coordinates": {
+          "latitude": 25.01974323,
+          "longitude": 121.53842264,
+          "crs": "EPSG:4326",
+          "status": "verified-building",
+          "precision": "建築物層級，不表示樓層或實際入口",
+          "method": "官方 WFS 建築輪廓面積重心",
+          "featureId": "ntu_building_bound.48",
+          "buildingUid": "AT1020",
+          "officialName": "新生教學館",
+          "verifiedMapKey": 200
+        },
+        "entranceNote": null
+      },
+      "description": "",
+      "externalLinks": [],
+      "recorder": "許凱琳",
+      "photos": [
+        {
+          "src": "images/s15-01.jpg",
+          "alt": "新生教學館 1.5F 討論室，PDF 原始照片 1",
+          "sourcePage": 19,
+          "sourceImage": 1,
+          "sha256": "e7a609fc8b2cc4b8feea50d6734706405e6b7d7ef673e0ccf598840fa1f6ece1"
+        }
+      ],
+      "issueIds": [
+        "unknown-counts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "pageUrl": "http://127.0.0.1:4173/",
+  "readiness": {
+    "status": 200,
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "cacheControl": "public, max-age=60, must-revalidate"
+  },
+  "mode": "headed Chrome, real HTTP server, passive CDP logging, no routes or header overrides",
+  "initialRequests": 16,
+  "requestsAfterZoom": 36,
+  "requestsOnZoomBack": 8,
+  "tiles": [
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28061.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=18673, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"8d8b449c684033524858864e68792c9d\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28061.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=13769, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"1d0b609b59223ac87895a2b0c85f78a6\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28062.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=20646, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"af7b4e338214f447a255c06baf66d43f\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28062.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=20957, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"43eb5c32fd1769ccde52bf76c1c1c922\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28060.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=15971, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"69b053c872da2c4121decf26454dc1e1\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28060.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=14066, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"da41543e81568142bee2b97781ff712b\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28061.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=12221, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"b956a6c9b8ebade793da3e1204bf3549\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28061.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=11331, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"b878721fa1a4ce88cb300686695719c8\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28062.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28062.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28063.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=16349, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"13b71107a792c702470f2628cd01f26b\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28063.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=12107, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"a66b531806e36a6e165718f176068123\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28060.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=17002, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"f7745f7c7761226355ee676c6bac0657\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28060.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=10962, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"f6a0a655724078c735d20da83423fa59\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28063.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=15172, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"6b4c2f173d7f37c1c149e37ca3d13cdb\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28063.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56123.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=21284, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"07d9135585d6ee52543234a4271b0fa6\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56123.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56122.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56122.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56124.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=17731, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"8b51023e32cee061a5a1614754a8ddcb\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56124.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null,
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=11195, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"22a8041346561b175eff23468ebe16d3\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56123.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56123.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56122.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56122.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56124.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56124.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56121.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56121.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109786/56120.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109787/56120.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56121.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56121.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109785/56120.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/17/109788/56120.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36"
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28061.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=14042, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"91f5a092f39cbca4de47dfce6ddffcb4\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54893/28059.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=13698, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"35f5880a6c6a61a826ba0a6ab3f981c7\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54894/28059.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=17721, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"ffda902a59ee8f7dda28ce825000a297\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28059.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=17728, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"ae15762f9c2324aaf7c5bf0f2c178e64\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28059.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=18425, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"eb8fba6813e3127709f2bf1b2f47002d\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54892/28062.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=21327, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"832d9ea955bd5acb4a21f90ddc5e5b1d\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28062.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "status": 200,
+      "xBlocked": null,
+      "cacheControlResponse": "max-age=15847, stale-while-revalidate=604800, stale-if-error=604800",
+      "etag": "\"2ee317d382ee6fd3c2247966bef8b050\"",
+      "fromDiskCache": false
+    },
+    {
+      "url": "https://tile.openstreetmap.org/16/54895/28060.png",
+      "referer": "http://127.0.0.1:4173/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+      "cacheControlRequest": null,
+      "pragmaRequest": null
+    }
+  ],
+  "blockedResponses": 0,
+  "errors": [],
+  "markers": 13,
+  "spaces": 15,
+  "zoomAndPopup": "passed",
+  "searchAndMarkers": "passed"
+}

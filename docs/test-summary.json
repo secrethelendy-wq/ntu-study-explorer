@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "scope": "OSM 403 map repair",
+  "unitTests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "browserTests": {
+    "expected": 21,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "duration": 81266.438
+  },
+  "regressionTileMode": "local mock; never public OSM",
+  "liveMapMode": "headed Chrome + real local HTTP server + passive Network logging",
+  "liveBlockedResponses": 0,
+  "cacheRevisitHits": 16,
+  "metadataUnchanged": true,
+  "metadataSha256": "374c3a1bf41f01209610423d662836b6bbc87b44a725d26e7dc6baf8a8523dc5"
+}
