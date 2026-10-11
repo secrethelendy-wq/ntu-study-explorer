@@ -36,7 +36,7 @@ export interface Dataset { schemaVersion: string; title: string; source: { filen
 export interface Filters {
   query: string
   quietness: '' | Quiet
-  outlets: '' | Coverage
+  outlets: '' | Coverage | 'available'
   openness: string
   studentCard: '' | 'yes' | 'no'
   airConditioning: '' | 'yes' | 'no'
