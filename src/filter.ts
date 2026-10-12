@@ -37,6 +37,7 @@ export function filterSpaces(data: Space[], filters: Filters): Space[] {
   })
 }
 export const filterCount = (f: Filters) => Object.entries(f).filter(([key, value]) => key !== 'query' && value !== '' && value !== false && value !== 0).length
+export const filtersDiffer = (applied: Filters, draft: Filters) => (Object.keys(draft) as (keyof Filters)[]).some(key => key !== 'query' && draft[key] !== applied[key])
 export function seatsLabel(s: Space['seats'] | SeatArea) {
   return `${s.estimated ? '約 ' : ''}${s.minimum === s.maximum ? s.minimum : `${s.minimum}–${s.maximum}`} 席`
 }
