@@ -7,13 +7,23 @@ import { fileURLToPath } from 'node:url'
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const d=JSON.parse(fs.readFileSync(path.join(root,'src/data/spaces.json'),'utf8'))
 const fields=['名稱','席位','插座','安靜程度','空間開放程度','是否需要學生證','空調','飲食','光線相關','地點','說明','記錄者','照片']
+const sourceRecords=JSON.parse(fs.readFileSync(path.join(root,'docs/source/records-24.json'),'utf8'))
+const pdfLinks=JSON.parse(fs.readFileSync(path.join(root,'docs/source/pdf-links.json'),'utf8'))
+const provenance=JSON.parse(fs.readFileSync(path.join(root,'docs/source/update-provenance.json'),'utf8'))
+const normalize=value=>value.normalize('NFKC').replace(/\s+/g,'')
+assert.equal(d.source.pageCount,24)
+assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'docs/source/source.pdf'))).digest('hex'),provenance.pdfSha256)
 assert.equal(d.spaces.length,d.source.recordCount)
 assert.equal(d.spaces.reduce((n,s)=>n+s.photos.length,0),d.source.photoCount)
 assert.equal(new Set(d.spaces.map(s=>s.id)).size,d.spaces.length)
 const snapshot=JSON.parse(fs.readFileSync(path.join(root,'docs/source/buildings.geojson'),'utf8'))
 for(const s of d.spaces){
+  const source=sourceRecords.find(record=>record.id===s.id)
+  assert.ok(source,`${s.id} 必須有新版 PDF 原文對照`)
+  assert.deepEqual(s.source.pages,[source.page])
   assert.equal(Object.keys(s.raw).length,13,`${s.id} 原始元件數`)
   for(const key of fields)assert.equal(typeof s.raw[key],'string',`${s.id} 缺少 ${key}`)
+  for(const key of fields)assert.equal(normalize(s.raw[key]),normalize(source.raw[key]),`${s.id} ${key} 必須吻合新版 PDF`)
   assert.equal(s.seats.minimum,s.seats.areas.reduce((n,a)=>n+a.minimum,0))
   assert.equal(s.seats.maximum,s.seats.areas.reduce((n,a)=>n+a.maximum,0))
   assert.equal(s.seats.estimated,s.seats.areas.some(a=>a.estimated))
@@ -23,6 +33,8 @@ for(const s of d.spaces){
   assert.ok(s.source.pages.every(p=>Number.isInteger(p)&&p>=1&&p<=d.source.pageCount))
   const url=new URL(s.location.officialMapUrl)
   assert.equal(url.hostname,'map.ntu.edu.tw')
+  assert.ok(pdfLinks.some(link=>link.page===source.page&&link.uri===s.location.officialMapUrl),`${s.id} 完整官方網址必须吻合該頁 PDF 超連結註記`)
+  assert.ok(!/\s/.test(s.location.officialMapUrl))
   assert.equal(s.location.originalMapKey,Number(Buffer.from(url.searchParams.get('apKey'),'base64').toString()))
   const c=s.location.coordinates
   if(c){

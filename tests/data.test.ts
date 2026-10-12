@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { dataset, spaces } from '../src/data'
+import sourceRecords from '../docs/source/records-24.json'
 
 describe('原始 PDF 轉換完整性與資料品質',()=>{
   it('來源頁數與照片數吻合，記錄者姓名完整保留',()=>{
-    expect(dataset.source.pageCount).toBe(19)
+    expect(dataset.source.pageCount).toBe(24)
     expect(spaces.reduce((n,s)=>n+s.photos.length,0)).toBe(18)
     expect(spaces.slice(0,5).every(s=>s.recorder==='陳子罃')).toBe(true)
     expect(spaces.slice(5,10).every(s=>s.recorder==='郭亮纖')).toBe(true)
@@ -13,9 +14,9 @@ describe('原始 PDF 轉換完整性與資料品質',()=>{
     for(const s of spaces){expect(Object.keys(s.raw)).toHaveLength(13);expect(s.raw['名稱']).toBe(s.name);expect(s.raw['記錄者']).toBe(s.recorder)}
     expect(spaces[1].raw['說明']).toBe('')
   })
-  it('管理學院二號館跨頁四張照片不誤配給沃斯空間',()=>{
-    expect(spaces[6].photos.map(p=>p.sourcePage)).toEqual([9,10,10,11])
-    expect(spaces[7].photos.map(p=>p.sourcePage)).toEqual([12])
+  it('新版管理學院二號館四張照片同在第 14 頁，不誤配給沃斯空間',()=>{
+    expect(spaces[6].photos.map(p=>p.sourcePage)).toEqual([14,14,14,14])
+    expect(spaces[7].photos.map(p=>p.sourcePage)).toEqual([15])
   })
   it('原始錯誤地圖網址保留，獨立定位來源不是原始視圖中心',()=>{
     expect(spaces[3].location.officialMapUrl).toBe(spaces[0].location.officialMapUrl)
@@ -42,5 +43,29 @@ describe('原始 PDF 轉換完整性與資料品質',()=>{
     for(const s of spaces){expect(s).not.toHaveProperty('openingHours');expect(s).not.toHaveProperty('availableSeats')}
     expect(spaces[8].seats.minimum).toBe(25)
     expect(spaces[9].seats.minimum).toBe(182)
+  })
+  it('十五筆 ID 穩定，原始欄位逐一吻合獨立擷取的新版 PDF',()=>{
+    const normalize=(s:string)=>s.normalize('NFKC').replace(/\s+/g,'')
+    expect(spaces.map(s=>s.id)).toEqual(sourceRecords.map(r=>r.id))
+    for(const [index,s] of spaces.entries()) {
+      const record=sourceRecords[index]
+      expect(s.source.pages).toEqual([record.page])
+      for(const [field,value] of Object.entries(record.raw)) expect(normalize(s.raw[field]),`${s.id} ${field}`).toBe(normalize(value))
+    }
+  })
+  it('新版移除普通、博雅插座席位數，保留位置且不從總席位推估',()=>{
+    for(const index of [1,4]) {
+      expect(spaces[index].outlets.coverage).toBe('partial')
+      expect(spaces[index].outlets.knownSeats).toBeNull()
+      expect(spaces[index].outlets.knownSeatRange).toBeNull()
+      expect(spaces[index].outlets.estimated).toBe(false)
+    }
+    expect(spaces[1].outlets.location).toContain('連接通道')
+    expect(spaces[4].outlets.location).toBe('窗邊座位')
+    expect(spaces[1].lighting.indoorFixtures).toBe(false)
+    expect(spaces[1].lighting.indoorAdequacy).toBe('none')
+    expect(spaces[2].quietness.discussion).toBe('allowed')
+    expect(spaces[2].quietness.discussionOriginal).toBe('開放正常討論')
+    expect(spaces[2].quietness.note).toBe('未禁止討論，但現場很安靜')
   })
 })
